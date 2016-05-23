@@ -556,6 +556,10 @@ padding: 100px 30px 100px 30px;
 #home {
   height: 100vh;
 }
+
+#home-details {
+  padding-top: 330px;
+}
 /*#home-details > h1 {
   font-size: 15px !important;
 }
