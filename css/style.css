@@ -87,6 +87,8 @@ button:focus {
   background-position: right;
   background-color: hsla(210, 27%, 15%, 1);
   filter: brightness(0.7);
+  -webkit-filter: brightness(0.7);
+  -moz-filter: brightness(0.7);
   /*height: 100vh;*/
 }
 
