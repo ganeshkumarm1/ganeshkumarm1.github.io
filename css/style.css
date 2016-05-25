@@ -159,7 +159,7 @@ div#svg{
   border: solid 7px teal;
 }
 #skills {
-  background-image: url("../images/skills2.png");
+  background-image: url("../images/skills.png");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter:blur(0.5);
@@ -462,7 +462,7 @@ background-color: #e6d019 !important;
 #address-mail-phone > div > i{
   font-size: 14px;
   font-weight: bold;
-  color: #009678;
+  color: #2d3e50;
 }
 
 textarea {
@@ -560,7 +560,7 @@ padding: 100px 30px 100px 30px;
 }
 
 #address-mail-phone {
-  marginn-top: 50px;
+  margin-top: 20px;
 }
 
 }
