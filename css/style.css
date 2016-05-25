@@ -109,11 +109,29 @@ button:focus {
   border: solid 3px white;
   padding: 5px;
 }
+
+div#svg{
+  margin-top: 40px;
+  height: 300px !important;
+  background-image: url("../images/svg_image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #about > .container-fluid {
     padding: 100px 80px 100px 80px;
 }
 
-#about-me > .blockquote, #social-desc > div > .blockquote, #contact-desc > div > .blockquote,  #skills-desc > div > .blockquote, #projects-desc > div > .blockquote , #resume-desc > div > .blockquote{
+#about {
+  background-color: #202833;
+}
+#about-me > .blockquote {
+  border-left: 5px solid #19bd9b;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fafafa;
+}
+ #social-desc > div > .blockquote, #contact-desc > div > .blockquote,  #skills-desc > div > .blockquote, #projects-desc > div > .blockquote , #resume-desc > div > .blockquote{
   border-left: 5px solid #19bd9b;
   font-family: Montserrat;
   font-weight: bold;
@@ -122,16 +140,24 @@ button:focus {
 }
 
 #about-me-content {
-  font-family: 'Montserrat';
-  color: black;
+  font-family: 'PT Sans Narrow';
+  color: white;
   font-size: 20px;
-  padding-top: 20px;
+  margin-top: 50px;
+}
+
+#about-me-content > a {
+  color: #19bd9b;
 }
 #about-me-content > a:hover {
   text-decoration: none;
 }
 
-
+#things-i-like > div > img {
+  width: 150px;
+  height: 150px;
+  border: solid 7px teal;
+}
 #skills {
   background-image: url("../images/skills2.png");
   background-repeat: no-repeat;
@@ -282,7 +308,7 @@ background-color: #e6d019 !important;
   color: white;
 }
 #projects {
-  background: #f7f7f7;
+  background: #fafafa;
 }
 
 #projects-desc {
@@ -312,7 +338,7 @@ background-color: #e6d019 !important;
 
 #picture-container:hover {
   cursor: pointer;
-  box-shadow: 0 0 20px #212121;
+  opacity: 0.7;
 }
 
 #social {
@@ -532,4 +558,9 @@ padding: 100px 30px 100px 30px;
 #profile-picture {
   margin-top: 100px;
 }
+
+#address-mail-phone {
+  marginn-top: 50px;
+}
+
 }
