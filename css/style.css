@@ -580,7 +580,9 @@ padding: 100px 30px 100px 30px;
   margin: 0px 0px 0px 0px;
 }
 
-
+#profile-picture {
+  margin-top: 100px;
+}
 /*#home-details {
   padding-top: 330px;
 }*/
