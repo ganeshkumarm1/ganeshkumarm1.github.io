@@ -3,11 +3,12 @@ button:focus {
 }
 .navbar-default {
   /*filter: brightness(0.7);*/
-  /*background: #202833 !important;
-  border-color: #202833 !important;*/
-  background: transparent !important;
-  border-color: transparent !important;
-  padding-top: 20px;
+  background: #202833 !important;
+  border-color: #202833 !important;
+  /*background: transparent !important;
+  border-color: transparent !important;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
 /*  padding: 30px 0px 10px 0px;*/
   transition: .5s;
 }
@@ -82,21 +83,26 @@ button:focus {
   transition: 1s;
 }
 #home {
-  background-image: url("../images/ganesh1.png");
+  background-color: #18bc9c;
+  /*background-image: url("../images/ganesh1.png");
   background-repeat: no-repeat;
   background-position: right;
   background-color: hsla(210, 27%, 15%, 1);
   filter: brightness(0.7);
   -webkit-filter: brightness(0.7);
-  -moz-filter: brightness(0.7);
+  -moz-filter: brightness(0.7);*/
   /*height: 100vh;*/
 }
 
+#profile-picture {
+  margin-top: 150px;
+  width: 200px;
+  height: 200px;
+}
 #home-details {
-  padding-top: 180px;
-  padding-bottom: 180px;
+  /*padding-top: 100px;
+  padding-bottom: 50px;*/
   text-align: center;
-
   font-size: 30px;
 }
 
@@ -107,15 +113,26 @@ button:focus {
 }
 
 #home-details > p {
-  color: white;
-  font-family: monospace;
+  color: #202833;
+  font-family: arial;
+  font-weight: bold;
   font-size: 15px;
+}
+
+#field-details > img {
+  width: 50px;
+  height: 50px;
+  background-color: #202833;
+  border-color: #202833 !important;
+  margin: 10px 10px 100px 10px;
+  border: solid 3px white;
+  padding: 5px;
 }
 #about > .container-fluid {
     padding: 100px 80px 100px 80px;
 }
 
-#about-me > div > .blockquote, #social-desc > div > .blockquote, #contact-desc > div > .blockquote,  #skills-desc > div > .blockquote, #projects-desc > div > .blockquote , #resume-desc > div > .blockquote{
+#about-me > .blockquote, #social-desc > div > .blockquote, #contact-desc > div > .blockquote,  #skills-desc > div > .blockquote, #projects-desc > div > .blockquote , #resume-desc > div > .blockquote{
   border-left: 5px solid #19bd9b;
   font-family: Montserrat;
   font-weight: bold;
@@ -130,6 +147,12 @@ button:focus {
   text-align: justify;
 }*/
 
+#about-me-content {
+  font-family: 'Montserrat';
+  color: black;
+  font-size: 20px;
+  padding-top: 20px;
+}
 #about-me-content > a:hover {
   text-decoration: none;
 }
@@ -553,13 +576,10 @@ padding: 100px 30px 100px 30px;
   margin: 0px 0px 0px 0px;
 }
 
-#home {
-  height: 100vh;
-}
 
-#home-details {
+/*#home-details {
   padding-top: 330px;
-}
+}*/
 /*#home-details > h1 {
   font-size: 15px !important;
 }
