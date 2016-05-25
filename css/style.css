@@ -541,6 +541,10 @@ textarea {
     overflow-x: hidden;
   }
 
+.navbar-default {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
   #resume > .container-fluid {
     padding: 100px 30px 30px 30px;
   }
