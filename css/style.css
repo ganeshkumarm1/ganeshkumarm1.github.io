@@ -420,7 +420,7 @@ background-color: #e6d019 !important;
   padding: 100px 80px 30px 80px;
 }
 
-#say-hi {
+#say-hi, #address-mail-phone {
   margin-top: 50px;
 }
 
@@ -451,19 +451,13 @@ background-color: #e6d019 !important;
   opacity: .8;
 }
 
-#address-mail-phone {
-  margin: 100px auto;
-}
-
 #address-mail-phone > div {
-  margin-top: 30px;
+  margin: 15px 0px 15px 0px;
 }
-
 #address-mail-phone > div > i{
   font-size: 14px;
   font-weight: bold;
   color: #2d3e50;
-  text-align: center;
 }
 
 textarea {
