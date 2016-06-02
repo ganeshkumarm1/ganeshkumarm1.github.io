@@ -452,7 +452,9 @@ background-color: #e6d019 !important;
 }
 
 #address-mail-phone {
-  margin: 100px 0px 0px 50px;
+  margin: 100px auto;
+  display: block;
+  /*margin: 100px 0px 0px 50px;*/
 }
 
 #address-mail-phone > div {
@@ -561,10 +563,11 @@ padding: 100px 30px 100px 30px;
 }
 
 #address-mail-phone {
-  /*margin-top: 20px;
-  margin-left: 0px;*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*margin-left: 0px;
   margin: 0px auto;
-  display: block;
+  display: block;*/
 }
 
 }
