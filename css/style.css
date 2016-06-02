@@ -453,6 +453,7 @@ background-color: #e6d019 !important;
 
 #address-mail-phone > div {
   margin: 15px 0px 15px 0px;
+  display: block;
 }
 #address-mail-phone > div > i{
   font-size: 14px;
