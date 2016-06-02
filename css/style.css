@@ -453,24 +453,16 @@ background-color: #e6d019 !important;
 
 #address-mail-phone {
   margin: 100px auto;
-  display: block;
-  /*margin: 100px 0px 0px 50px;*/
 }
 
-#address-mail-phone > div{
-  margin: 20px auto;
-  display: block;
-}
-
-/*#address-mail-phone > div {
+#address-mail-phone > div {
   margin-top: 30px;
-}*/
+}
 
 #address-mail-phone > div > i{
   font-size: 14px;
   font-weight: bold;
   color: #2d3e50;
-  text-align: center;
 }
 
 textarea {
