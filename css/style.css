@@ -110,13 +110,13 @@ button:focus {
   padding: 5px;
 }
 
-div#svg{
+/*div#svg{
   margin-top: 40px;
   height: 300px !important;
   background-image: url("../images/svg_image.svg");
   background-repeat: no-repeat;
   background-size: cover;
-}
+}*/
 #about > .container-fluid {
     padding: 100px 80px 100px 80px;
 }
@@ -312,14 +312,14 @@ background-color: #e6d019 !important;
 }
 
 #projects-desc {
-  padding: 80px 80px 30px 80px;
+  padding: 80px 50px 10px 80px;
 }
 .img-responsive {
   height: 500px !important;
 }
 
 #projects > .container-fluid {
-  padding-top: 40px !important;
+  padding-top: 0px !important;
   padding-bottom: 40px;
 }
 
@@ -359,62 +359,38 @@ background-color: #e6d019 !important;
   color: white;
   padding-top: 10px;
 }
-#links > a > i {
+#links > a > i, #quora > strong {
   margin:50px 10px 10px 10px;
-  border: solid 3px white;
-  padding: 10px 10px 10px 10px !important;
+  /*border: solid 3px white;*/
+  /*padding: 10px 10px 10px 10px !important;*/
+  width: 50px;
+  height: 50px;
   transition: 0.5s;
 }
 
 #links > a > i.fa {
   color: white;
   text-align: center;
-  font-size: 20px;
-  padding: 0px 10px 0px 10px;
+  font-size: 30px;
+  /*padding: 0px 10px 0px 10px;*/
 }
 
 #links > a > i:hover {
   cursor: pointer;
-  border-color: #19bd9b;
-  background:  #19bd9b;
-  text-decoration: none;
-}
-#more-links {
-  margin-top: 60px;
-}
-
-#more-links > div > blockquote {
-  font-size: 20px;
-  font-family: Montserrat;
-  border-left: 5px solid #19bd9b;
-  font-weight: bold;
-  color: white;
-}
-
-#more-links-link > a > i, #more-links-link > a > strong {
-  color: white;
-  font-size: 20px;
-  margin: 10px 15px 10px 15px;
-  border: solid 3px white;
-  padding: 10px 10px 10px 10px;
-  transition: .5s;
-}
-
-#more-links-link > a > i:hover, #more-links-link > a > strong:hover {
-  cursor: pointer;
-  border-color: #19bd9b;
-  background: #19bd9b;
+  color: #19bd9b;
+  /*background:  #19bd9b;*/
   text-decoration: none;
 }
 
-#more-links-link > a:hover {
-  text-decoration: none;
+#links > a > strong {
+  transition: 0.5s;
+  text-decoration: none !important;
 }
 
-#more-links-link > a:focus {
-  text-decoration: none;
+#links > a > strong:hover {
+  color: #19bd9b !important;
+  text-decoration: none !important;
 }
-
 
 #contact > .container-fluid {
   padding: 100px 80px 30px 80px;
@@ -535,15 +511,12 @@ padding: 100px 30px 100px 30px;
 #contact > .container-fluid {
   padding: 100px 30px 30px 30px;
 }
-#links > a > i.fa {
+#links > a > i.fa, #links > a > strong {
   text-align: center;
-  font-size: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 0px 8px 0px 8px;
-}
-
-#more-links-link > a > i, #more-links-link > a > strong {
-    font-size: 10px;
-    margin-bottom: 50px;
 }
 
 #picture-container{
