@@ -122,14 +122,14 @@ button:focus {
 }
 
 #about {
-  background-color: #202833;
+  /*background-color: #202833;*/
 }
 #about-me > .blockquote {
   border-left: 5px solid #19bd9b;
   font-family: Montserrat;
   font-weight: bold;
   font-size: 30px;
-  color: #fafafa;
+  color: #2d3e50;
 }
  #social-desc > div > .blockquote, #contact-desc > div > .blockquote,  #skills-desc > div > .blockquote, #projects-desc > div > .blockquote , #resume-desc > div > .blockquote{
   border-left: 5px solid #19bd9b;
@@ -141,7 +141,7 @@ button:focus {
 
 #about-me-content {
   font-family: 'PT Sans Narrow';
-  color: white;
+  color: black;
   font-size: 20px;
   margin-top: 50px;
 }
@@ -159,9 +159,10 @@ button:focus {
   border: solid 7px teal;
 }
 #skills {
-  background-image: url("../images/skills.png");
+  /*background-image: url("../images/skills.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
+  background-color: #2d3e50;
   -webkit-filter:blur(0.5);
   filter:blur(0.5);
 }
