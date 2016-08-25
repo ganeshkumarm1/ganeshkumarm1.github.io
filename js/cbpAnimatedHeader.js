@@ -7,7 +7,6 @@ cbpAnimatedHeader = (function () {
 		changeHeaderOn = 200;
 	var nav = document.querySelector('.navbar-nav');
 	var brand = document.querySelector('.navbar-brand');
-	//var icon = document.querySelector('.icon-bar');
 	var icon = document.getElementsByClassName('icon-bar')
 
 	function init() {
@@ -28,7 +27,6 @@ cbpAnimatedHeader = (function () {
 			for (var i = 0; i < icon.length; i++) {
 				classie.add(icon[i], 'icon-bar-shrink');
 			}
-			//$('.navabr-toggle').has('.icon-bar').addClass('icon-bar-shrink');
 		}
 		else {
 			classie.remove(header, 'navbar-shrink');
