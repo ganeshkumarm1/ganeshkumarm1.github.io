@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     $(window).load(function() {
-        $('#spinner-wrapper').fadeOut(500);
+        $('.spinner').fadeOut(500);
     });
 
     //Smooth transition
