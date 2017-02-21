@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  
+    $('#spinner-wrapper').fadeOut(500);
     //Smooth transition
     $(function() {
         $('a.page-scroll').bind('click', function(event) {
