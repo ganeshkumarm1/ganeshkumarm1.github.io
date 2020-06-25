@@ -1,2 +1,2 @@
 # GaneshmKumar.github.io
-Website Link <a href="http://ganeshmkumar.github.io/">ganeshmkumar.github.io</a>
+Website Link <a href="http://ganeshkumarm1.github.io/">ganeshkumarm1.github.io</a>
