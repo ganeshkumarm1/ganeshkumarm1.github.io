@@ -466,7 +466,6 @@ span.title {
     color: var(--white);
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1.2px;
-    text-transform: capitalize;
     transition: 0.5s ease-in-out;
 }
 
