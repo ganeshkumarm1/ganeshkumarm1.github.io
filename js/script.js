@@ -50,6 +50,9 @@ const getArticles = function () {
 }
 
 $(function () {
+    if(navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+        $("#wrapper").toggleClass("toggled");
+    }
 
     getArticles();
 
@@ -108,7 +111,8 @@ $(function () {
             var hash = this.hash;
 
             addNavBg(hash);
-            $('html, body').animate({
+            console.log($(hash).offset().top);
+            $('body').animate({
                 scrollTop: $(hash).offset().top
             }, 100, 'swing',function(){
                 window.location.hash = hash;
