@@ -10,7 +10,7 @@ var mediumArticles = [];
 
 const getArticleDOM = function (article) {
     const content = article.content.replace(/<\/?[^>]+>/ig, " ").substring(0, 100);
-    const articleLink = article.link.split('?')[0];
+    const articleLink = article.link.split('?')[0].replace(/-/g, "/");
     const date = new Date(article.pubDate);
 
     const pubDate = `${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
