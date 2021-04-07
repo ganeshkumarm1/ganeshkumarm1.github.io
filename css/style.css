@@ -3,6 +3,7 @@
 
 body {
     overflow-y: scroll;
+    position: relative;
 }
 
 .loader-wrapper {
@@ -304,8 +305,8 @@ span.title {
     background: transparent; /* Optional: just make scrollbar invisible */
 }
 
-.scroll-container button {
-    font-family: 'Montserrat', sans-serif !important;
+button {
+    font-family: 'Poppins', sans-serif !important;
     padding: 7px 21px !important;
     border-radius: 30px !important;
     background-color: transparent !important;
@@ -397,7 +398,7 @@ span.title {
 }
 
 #about .subtitle {
-    transform: translate(20px, 30px);
+    transform: translate(30px, 30px);
 }
 
 .optum-se, .amazon {
@@ -506,10 +507,71 @@ span.title {
     margin-top: 30px;
     padding-left: 30px !important;
     padding-right: 30px !important;
-    font-family: 'Poppins', sans-serif !important;
 }
 
-@media (max-width: 480px) {
+.down-arrow {
+    text-align: center;
+    opacity: 0.2;
+    font-size: 1.6rem;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
+    display: none;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+@-webkit-keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .optum-se, .amazon {
+        margin-left: 0px;
+        margin-top: 20px !important;
+        border-left: solid 5px var(--secondary);
+    }
+
+    .blog {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 468px) {
+    .navbar-brand-logo {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .social span {
+        font-size: 1.5rem;
+        margin-right: 15px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .down-arrow {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
     #about, #skills, #experience, #contact, #blogs {
         position: relative;
         padding-left: 2.5rem;
@@ -556,6 +618,7 @@ span.title {
     #about .subtitle, #blogs .subtitle, #contact .subtitle {
         font-size: 2.5rem !important;
     }
+
     .optum-se, .amazon {
         margin-left: 0px;
         margin-top: 20px !important;

@@ -15,7 +15,7 @@ const getArticleDOM = function (article) {
 
     const pubDate = `${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 
-    return `<div class="col-md-3 col-xs-12 col-sm-12 blog box no-border no-padding">
+    return `<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 blog box no-border no-padding">
                 <a href="${articleLink}" target="_blank">
                     <img src="${article.thumbnail}" alt="${article.title}">
                     <div class="content">
@@ -51,7 +51,7 @@ const getArticles = function () {
 
 $(function () {
 
-    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
         target: '#menu',
     })
 
@@ -98,6 +98,9 @@ $(function () {
         else if(e.code === 'ArrowUp') {
             curr -= 1;
             if(curr < 0) curr = 0;
+        }
+        else if(e.code === 'Escape') {
+            $('#wrapper').toggleClass("toggled");
         }
 
         if(e.code === 'ArrowDown' || e.code === 'ArrowUp') {
