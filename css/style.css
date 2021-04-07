@@ -119,6 +119,8 @@ a:hover {
 #menu-toggle {
     padding-right: 10px !important;
     padding-left: 10px !important;
+    font-size: 1.3rem;
+    opacity: 0.2;
 }
 
 .navbar-brand-logo {
@@ -128,6 +130,8 @@ a:hover {
 }
 
 .navbar-brand {
+    color: var(--white);
+    opacity: 0.75;
     font-family: 'Poppins', sans-serif;
     font-size: 1.4rem !important;
     margin-left: 5px !important;
