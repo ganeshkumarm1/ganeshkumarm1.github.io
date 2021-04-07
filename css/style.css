@@ -157,6 +157,7 @@ p, h1, h2, h3, h4, h5, h6, li, span, div, .list-group a {
 }
 
 a .sidebar-heading {
+    opacity: 0.4;
     transition: 0.3s ease-in-out;
 }
 
