@@ -50,6 +50,11 @@ const getArticles = function () {
 }
 
 $(function () {
+
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#menu',
+    })
+
     if(navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
         $("#wrapper").toggleClass("toggled");
     }
@@ -111,13 +116,15 @@ $(function () {
             var hash = this.hash;
 
             addNavBg(hash);
-            console.log($(hash).offset().top);
+
             $('body').animate({
                 scrollTop: $(hash).offset().top
             }, 100, 'swing',function(){
                 window.location.hash = hash;
             });
+
             $('#wrapper').toggleClass("toggled");
+            $(hash + '-nav').addClass('active');
         }
     });
 

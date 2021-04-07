@@ -76,8 +76,13 @@ body {
 section {
     position: relative;
     padding-top: 6em;
-    overflow-y: auto;
-    scroll-snap-align: start;
+    overflow-y: scroll;
+    /*scroll-snap-align: end;*/
+}
+
+#contact {
+    padding-bottom: 6rem;
+    height: 100vh !important;
 }
 
 a {
@@ -111,11 +116,17 @@ a:hover {
     background-color: var(--black-light);
 }
 
+.navbar-brand-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
 
 .navbar-brand {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.3rem !important;
+    font-size: 1.4rem !important;
     vertical-align: center;
+    letter-spacing: 1.1px;
 }
 
 :root {
@@ -219,13 +230,17 @@ span.title {
     text-align: center;
     position: absolute;
     padding-left: 50px;
-    bottom: 0;
+    top: 100%;
     left: 1%;
     overflow: hidden;
     transition: all .5s .6s ease-out;
     transform: rotate(-90deg);
     white-space: nowrap;
     transform-origin: 0 0;
+}
+
+#about .title {
+    top: 85% !important;
 }
 
 
@@ -263,9 +278,10 @@ span.title {
 }
 
 
-#about, #skills, #experience, #contact, #blogs {
+#about, #skills, #contact, #blogs {
     position: relative;
-    padding: 6rem 12rem;
+    padding-left:  12rem;
+    padding-right:  12rem;
 }
 
 .copyright {
@@ -279,9 +295,8 @@ span.title {
 }
 
 .scroll-container {
-    /*height: 100vh;*/
     overflow-y: scroll !important;
-    scroll-snap-type: y mandatory;
+    /*scroll-snap-type: y mandatory;*/
 }
 
 ::-webkit-scrollbar {
@@ -450,6 +465,10 @@ span.title {
     padding: 1rem 1.2rem;
 }
 
+.blogs, .experience, .education, form {
+    margin-left: 5px !important;
+}
+
 .blog {
     margin-right: 30px;
     transition: box-shadow 0.5s ease-in-out;
@@ -468,7 +487,7 @@ span.title {
     margin-top: 25px;
     border-radius: 0;
     background-color: var(--black);
-    border: solid 5px var(--grey);
+    border: solid 3.5px var(--grey);
     color: var(--white);
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1.2px;
@@ -533,9 +552,6 @@ span.title {
         font-size: 1.3rem;
     }
 
-    .navbar-brand {
-        font-size: 1.5rem !important;
-    }
 
     #about .subtitle, #blogs .subtitle, #contact .subtitle {
         font-size: 2.5rem !important;
@@ -573,5 +589,9 @@ span.title {
 
     #sidebar-wrapper .list-group-item {
         font-size: 1.15rem;
+    }
+
+    .blogs, .experience, .education, form {
+        margin-left: 0px !important;
     }
 }

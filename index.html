@@ -12,6 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon"/>
     <meta name="keywords" content="portfolio ganeshkumarm1, portfolio ganesh, my own portfolio ganeshkumarm1, my website ganeshmkumarm1">
     <meta name="author" content="Ganesh Kumar M">
 
@@ -25,7 +26,7 @@
     <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
     <link href="css/bootstrap-utilities.css" rel="stylesheet">
 </head>
-<body class="bg" data-bs-spy="scroll" data-bs-target="#menu">
+<body class="bg">
 <div class="loader-wrapper">
     <div class="loader"></div>
 </div>
@@ -35,11 +36,11 @@
         <a href="#" class="sidebar-close"><div class="sidebar-heading fa fa-times"></div></a>
         <div class="list-group" id="menu">
             <div class="nav">
-                <a href="#home" class="home-nav page-scroll list-group-item list-group-item-action bg-dark active">Home</a>
-                <a href="#about" class="about-nav page-scroll list-group-item list-group-item-action bg-dark">About</a>
-                <a href="#skills" class="skills-nav page-scroll list-group-item list-group-item-action bg-dark">Skills</a>
-                <a href="#blogs" class="blogs-nav page-scroll list-group-item list-group-item-action bg-dark">Blogs</a>
-                <a href="#contact" class="contact-nav page-scroll list-group-item list-group-item-action bg-dark">Contact</a>
+                <a onclick="event.preventDefault()" href="#home" class="home-nav page-scroll list-group-item list-group-item-action bg-dark active">Home</a>
+                <a onclick="event.preventDefault()" href="#about" class="about-nav page-scroll list-group-item list-group-item-action bg-dark">About</a>
+                <a onclick="event.preventDefault()" href="#skills" class="skills-nav page-scroll list-group-item list-group-item-action bg-dark">Skills</a>
+                <a onclick="event.preventDefault()" href="#blogs" class="blogs-nav page-scroll list-group-item list-group-item-action bg-dark">Blogs</a>
+                <a onclick="event.preventDefault()" href="#contact" class="contact-nav page-scroll list-group-item list-group-item-action bg-dark">Contact</a>
             </div>
 
         </div>
@@ -55,7 +56,10 @@
                     <button  id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="menu fa fa-bars"></span>
                     </button>
-                    <a href="#home" class="navbar-brand">Ganesh Kumar M</a>
+                    <a href="#home" class="navbar-brand">
+                        <img src="images/logo.png" class="navbar-brand-logo" alt="Ganesh Kumar M Logo">
+                        Ganesh Kumar M
+                    </a>
                 </div>
             </div>
         </nav>
@@ -81,7 +85,7 @@
                 </div>
             </section>
             <section id="about">
-<!--                <span class="title">about me</span>-->
+                <span class="title">about me</span>
                 <h2 class="subtitle">Education</h2>
                 <div class="row education">
                     <div class="col-md-4 col-xs-12 col-sm-12 college box">
@@ -122,7 +126,7 @@
                 </div>
             </section>
             <section id="skills">
-<!--                <span class="title">my skills</span>-->
+                <span class="title">my skills</span>
                 <h2 class="subtitle">Top Skills</h2>
                 <div class="row skill java">
                     <div class="row">
@@ -204,16 +208,16 @@
                 </div>
             </section>
             <section id="blogs">
-<!--                <span class="title">my blogs</span>-->
+                <span class="title">my blogs</span>
                 <h2 class="subtitle">Recent Blogs</h2><br>
-                <div class="row">
+                <div class="row blogs">
                     <div class="col-md-2 col-sm-6 col-xs-6 my-auto view-more">
                         <a href="https://ganeshkumarm1.medium.com" target="_blank"><button class="btn btn-primary view-more-articles">More blogs&nbsp;&nbsp;&nbsp;<span class="fa fa-external-link-square"></span></button></a>
                     </div>
                 </div>
             </section>
             <section id="contact">
-<!--                <span class="title">contact me</span>-->
+                <span class="title">&nbsp;&nbsp;contact</span>
                 <h2 class="subtitle">Get In Touch</h2>
                 <form  method = "post"  action = "https://formspree.io/ganeshkumar.m1996@gmail.com" class = "form-group col-sm-7">
                     <input id = "name" class = "form-control" name = "Name" type = "text" placeholder="Name" required/>
