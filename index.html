@@ -3,12 +3,30 @@
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77850754-2"></script>
     <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W3LZ29H');
+
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'UA-77850754-2');
+
+        var captureOutboundLink = function(url) {
+            ga('send', 'event', 'outbound', 'click', url, {
+                'transport': 'beacon',
+                'hitCallback': function(){document.location = url;}
+            });
+        }
     </script>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3LZ29H"
+                      height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,7 +95,7 @@
                             <h2>Full-Stack Developer / Blog Writer / Freelancer</h2>
                             <div class="social">
                                 <a href="mailto:ganeshkumar.m1996@gmail.com" target="_blank"><span class="fa fa-envelope"></span></a>
-                                <a href="https://www.linkedin.com/in/ganeshkumarm1" target="_blank"><span class="fa fa-linkedin-square"></span></a>
+                                <a onclick="captureOutboundLink('http://www.example.com'); return false;" href="https://www.linkedin.com/in/ganeshkumarm1" target="_blank"><span class="fa fa-linkedin-square"></span></a>
                                 <a href="https://twitter.com/ganeshkumarm_1" target="_blank"><span class="fa fa-twitter"></span></a>
                                 <a href="https://ganeshkumarm1.medium.com/" target="_blank"><span class="fa fa-medium"></span></a>
                                 <a href="https://www.freecodecamp.org/news/author/ganeshkumarm1/" target="_blank"><span class="fa fa-free-code-camp"></span></a>
@@ -234,8 +252,6 @@
                     <button id = "submit" class = "btn" type = "submit">Submit</button>
                 </form>
             </section>
-        </div>
-        <div class="fixed-bottom">
         </div>
     </div>
 </div>
