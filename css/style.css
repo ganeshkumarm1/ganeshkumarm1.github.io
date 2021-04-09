@@ -402,6 +402,10 @@ button {
     opacity: 0.5;
 }
 
+#blogs .pub-date {
+    font-size: 0.9rem;
+}
+
 #about .description, #blogs .description {
     font-family: 'Montserrat', sans-serif;
 }
@@ -481,7 +485,13 @@ button {
 
 .blog {
     margin-right: 30px;
+    border-radius: 7px;
     transition: box-shadow 0.5s ease-in-out;
+}
+
+.blog img {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 .blog:hover {

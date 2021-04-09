@@ -9,7 +9,6 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 var mediumArticles = [];
 
 const getArticleDOM = function (article) {
-    console.log(article)
     const content = article.content.replace(/<\/?[^>]+>/ig, " ").substring(0, 100);
     const articleLink = article.link.split('?')[0];
     const date = new Date(article.pubDate.replace(/-/g, "/"));
