@@ -199,7 +199,6 @@ nav {
 #sidebar-wrapper .list-group {
     padding-top: 1em;
     padding-left: 2em;
-
 }
 
 #sidebar-wrapper .list-group-item {
@@ -428,6 +427,10 @@ button {
     margin-bottom: 20px;
 }
 
+.blog {
+    transform: translateX(-5px);
+}
+
 .skill span {
     float: right;
 }
@@ -567,6 +570,13 @@ button {
 }
 
 @media (max-width: 468px) {
+    
+
+    #sidebar-wrapper .list-group-item {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
     .navbar-brand-logo {
         width: 25px;
         height: 25px;
@@ -578,6 +588,12 @@ button {
 }
 
 @media (max-width: 380px) {
+    
+
+    #sidebar-wrapper .list-group-item {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
     .social span {
         font-size: 1.5rem;
         margin-right: 15px !important;
@@ -591,6 +607,13 @@ button {
 }
 
 @media (max-width: 768px) {
+    
+
+    #sidebar-wrapper .list-group-item {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
     #about, #skills, #experience, #contact, #blogs {
         position: relative;
         padding-left: 2.5rem;
