@@ -17,7 +17,7 @@ const getArticleDOM = function (article) {
 
     return `<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 blog box no-border no-padding">
                 <a href="${articleLink}" target="_blank">
-                    
+                    <img src="${article.thumbnail}" alt="${article.title}">
                     <div class="content">
                         <h5>${article.title}</h5>
                         <p class="pub-date">${pubDate}</p>

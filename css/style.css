@@ -410,6 +410,8 @@ button {
 }
 
 #about .subtitle {
+    position: relative;
+    z-index: 100000;
     transform: translate(30px, 30px);
 }
 
@@ -427,7 +429,7 @@ button {
     margin-bottom: 20px;
 }
 
-.blog {
+.blog, .box {
     transform: translateX(-5px);
 }
 
