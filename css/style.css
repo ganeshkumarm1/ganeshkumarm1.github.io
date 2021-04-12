@@ -700,7 +700,7 @@ button {
     }
 
     span.title {
-        display: none;
+        display: none !important;
     }
 
     .navbar-shrink {
