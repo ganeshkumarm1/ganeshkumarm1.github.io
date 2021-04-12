@@ -50,6 +50,15 @@ const getArticles = function () {
 }
 
 $(function () {
+    $(".dropdown-menu li a").on('click', function() {
+        const text = $(this).text();
+        const classname = text.substring(0, 2).toLowerCase();
+
+        $('#dropdown-value').text(text);
+
+        $('.' + (classname === 'en' ? 'ta' : 'en')).css('display', 'none');
+        $('.' + classname).css('display', 'inline-block');
+    });
 
     const scrollSpy = new bootstrap.ScrollSpy(document.body, {
         target: '#menu',

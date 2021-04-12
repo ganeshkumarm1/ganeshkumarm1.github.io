@@ -1,6 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
+h1:lang(ta), h2:lang(ta), h3:lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), .navbar-brand:lang(ta) {
+    font-weight: bold;
+}
+
+.fa-globe {
+    margin-right: 7px;
+    color: var(--white);
+}
+
+.dropdown-menu-dark {
+    background-color: var(--black-light) !important;
+}
+
+.dropdown-toggle {
+    font-family: 'Poppins', sans-serif !important;
+    letter-spacing: 1.1px;
+    color: var(--white) !important;
+    border: none !important;
+}
+
+.dropdown-menu li a {
+    text-align: left;
+    font-weight: normal !important;
+    opacity: 0.5;
+}
+
+.ta {
+    display: none;
+}
+
 body {
     overflow-y: scroll;
     position: relative;
@@ -189,7 +219,7 @@ nav {
 
 #sidebar-wrapper {
     position: fixed;
-    z-index: 2000;
+    z-index: 2000000;
 }
 
 #sidebar-wrapper.bg-dark, #sidebar-wrapper .bg-dark {
@@ -573,6 +603,9 @@ button {
 
 @media (max-width: 468px) {
     
+    #dropdown-value {
+        display: none;
+    }
 
     #sidebar-wrapper .list-group-item {
         padding-top: 0.5em;
@@ -590,7 +623,10 @@ button {
 }
 
 @media (max-width: 380px) {
-    
+
+    #dropdown-value {
+        display: none;
+    }
 
     #sidebar-wrapper .list-group-item {
         padding-top: 0.5em;
@@ -609,7 +645,14 @@ button {
 }
 
 @media (max-width: 768px) {
-    
+    #dropdown-value {
+        display: none;
+    }
+
+    #sidebar-wrapper .ta .list-group-item {
+        font-size: 1rem !important;
+    }
+
 
     #sidebar-wrapper .list-group-item {
         padding-top: 0.5em;
@@ -638,6 +681,18 @@ button {
 
     #intro h2 {
         font-size: 1.1rem;
+    }
+
+    #intro h1:lang(ta) {
+        font-size: 2.5rem !important;
+    }
+
+    #intro h2:lang(ta) {
+        font-size: 1rem !important;
+    }
+
+    .navbar-brand:lang(ta) {
+        font-size: 1rem !important;
     }
 
     .short-nav {
