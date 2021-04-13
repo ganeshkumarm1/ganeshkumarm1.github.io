@@ -142,6 +142,7 @@ a:hover {
 }
 
 .navbar {
+    z-index: 1000000 !important;
     transition: 0.5s ease-in-out;
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
@@ -663,7 +664,7 @@ button {
 }
 
 @media (min-width: 1200px) {
-    .down-arrow {
+    .next-page {
         display: block;
     }
 }

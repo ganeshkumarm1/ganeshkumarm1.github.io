@@ -50,10 +50,10 @@ const getArticles = function () {
 }
 
 $(function () {
-    $("body").tooltip({ selector: '[data-bs-toggle=tooltip]' });
+    $("body").tooltip({selector: '[data-bs-toggle=tooltip]'});
 
 
-    $(".dropdown-menu li a").on('click', function() {
+    $(".dropdown-menu li a").on('click', function () {
         const text = $(this).text();
         const classname = text.substring(0, 2).toLowerCase();
 
@@ -67,13 +67,13 @@ $(function () {
         target: '#menu',
     })
 
-    if(navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
         $("#wrapper").toggleClass("toggled");
     }
 
     getArticles();
 
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         $('.loader-wrapper').fadeOut(300);
     });
 
@@ -103,19 +103,17 @@ $(function () {
     let curr = 0;
 
     $('body').on('keydown', function (e) {
-        if(e.code === 'ArrowDown') {
+        if (e.code === 'ArrowDown') {
             curr += 1;
-            if(curr >= ids.length) curr = ids.length - 1;
-        }
-        else if(e.code === 'ArrowUp') {
+            if (curr >= ids.length) curr = ids.length - 1;
+        } else if (e.code === 'ArrowUp') {
             curr -= 1;
-            if(curr < 0) curr = 0;
-        }
-        else if(e.code === 'Escape') {
+            if (curr < 0) curr = 0;
+        } else if (e.code === 'Escape') {
             $('#wrapper').toggleClass("toggled");
         }
 
-        if(e.code === 'ArrowDown' || e.code === 'ArrowUp') {
+        if (e.code === 'ArrowDown' || e.code === 'ArrowUp') {
             addNavBg(ids[curr]);
             $('html, body').animate({
                 scrollTop: $(ids[curr]).offset().top
@@ -124,7 +122,7 @@ $(function () {
 
     });
 
-    $("a").on('click', function(event) {
+    $("a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
 
@@ -134,7 +132,7 @@ $(function () {
 
             $('body').animate({
                 scrollTop: $(hash).offset().top
-            }, 100, 'swing',function(){
+            }, 100, 'swing', function () {
                 window.location.hash = hash;
             });
 
@@ -151,11 +149,10 @@ $(function () {
     }, false);
 });
 
-const addNavBg = function(id) {
-    if(id === '#home') {
+const addNavBg = function (id) {
+    if (id === '#home') {
         $('.navbar').removeClass('navbar-bg')
-    }
-    else {
+    } else {
         $('.navbar').addClass('navbar-bg')
     }
 }
@@ -164,8 +161,7 @@ function scrollPage() {
     const sy = scrollY();
     if (sy >= changeHeaderOn) {
         $('.navbar').addClass('navbar-bg');
-    }
-    else {
+    } else {
         $('.navbar').removeClass('navbar-bg');
     }
     didScroll = false;
