@@ -574,10 +574,23 @@ button {
     padding-right: 30px !important;
 }
 
-.down-arrow {
+.down-arrow-text, .down-arrow-icon {
     text-align: center;
     opacity: 0.2;
+}
+
+.down-arrow-text {
+    letter-spacing: 1.1px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0 !important;
+    font-size: 11px;
+}
+
+.down-arrow-icon {
     font-size: 1.6rem;
+}
+
+.next-page {
     animation: bounce 1s infinite alternate;
     -webkit-animation: bounce 1s infinite alternate;
     display: none;
