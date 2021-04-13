@@ -1,12 +1,12 @@
-var didScroll = false;
-var changeHeaderOn = 200;
+let didScroll = false;
+const changeHeaderOn = 200;
 
 const ids = ['#home', '#about', '#skills', '#blogs', '#contact'];
 const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
 ];
 
-var mediumArticles = [];
+let mediumArticles = [];
 
 const getArticleDOM = function (article) {
     const content = article.content.replace(/<\/?[^>]+>/ig, " ").substring(0, 100);
@@ -39,7 +39,7 @@ const getArticles = function () {
             mediumArticles = response.items;
             mediumArticles = mediumArticles.slice(0, 3);
 
-            var articlesDOM = "";
+            let articlesDOM = "";
 
             for (const mediumArticle of mediumArticles) {
                 articlesDOM += getArticleDOM(mediumArticle);
@@ -50,6 +50,9 @@ const getArticles = function () {
 }
 
 $(function () {
+    $("body").tooltip({ selector: '[data-bs-toggle=tooltip]' });
+
+
     $(".dropdown-menu li a").on('click', function() {
         const text = $(this).text();
         const classname = text.substring(0, 2).toLowerCase();
@@ -97,7 +100,7 @@ $(function () {
             $('#wrapper').toggleClass("toggled");
         });
 
-    var curr = 0;
+    let curr = 0;
 
     $('body').on('keydown', function (e) {
         if(e.code === 'ArrowDown') {
@@ -125,7 +128,7 @@ $(function () {
         if (this.hash !== "") {
             event.preventDefault();
 
-            var hash = this.hash;
+            const hash = this.hash;
 
             addNavBg(hash);
 
@@ -158,7 +161,7 @@ const addNavBg = function(id) {
 }
 
 function scrollPage() {
-    var sy = scrollY();
+    const sy = scrollY();
     if (sy >= changeHeaderOn) {
         $('.navbar').addClass('navbar-bg');
     }

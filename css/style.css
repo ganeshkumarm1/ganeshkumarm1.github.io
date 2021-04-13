@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 
 h1:lang(ta), h2:lang(ta), h3:lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), .navbar-brand:lang(ta) {
     font-weight: bold;
 }
 
 .fa-globe-asia {
+    opacity: 0.75;
     margin-right: 7px;
     font-size: 1rem;
     color: var(--white);
@@ -16,13 +17,15 @@ h1:lang(ta), h2:lang(ta), h3:lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), .n
 }
 
 .dropdown-toggle {
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Heebo', sans-serif !important;
+    font-weight: bold;
     letter-spacing: 1.1px;
     color: var(--white) !important;
     border: none !important;
 }
 
 .dropdown-menu li a {
+    font-family: Heebo, sans-serif;
     text-align: left;
     font-weight: normal !important;
     opacity: 0.5;
@@ -261,7 +264,6 @@ nav {
 
 
 span.title {
-    letter-spacing: 0.03em;
     opacity: 0.05;
     color: #888;
     font-family: 'Poppins', sans-serif;
@@ -283,6 +285,13 @@ span.title {
     top: 85% !important;
 }
 
+#contact .title {
+    top: 85% !important;
+}
+
+#blogs .title {
+    top: 100% !important;
+}
 
 .primary {
     color: var(--primary);
@@ -325,7 +334,7 @@ span.title {
 }
 
 .copyright {
-    font-family: Montserrat, sans-serif;
+    font-family: Heebo, sans-serif;
     position: absolute;
     font-size: 0.9rem !important;
     opacity: 0.3;
@@ -415,7 +424,7 @@ button {
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 1.5px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Heebo', sans-serif;
     line-height: 2;
     margin-top: 20px !important;
 }
@@ -425,7 +434,7 @@ button {
 }
 
 #about h6 {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Heebo', sans-serif !important;
 }
 
 #about .duration, #blogs .pub-date {
@@ -437,7 +446,8 @@ button {
 }
 
 #about .description, #blogs .description {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.1rem;
 }
 
 #about .subtitle {
@@ -469,7 +479,7 @@ button {
 }
 
 .skill .level, .skill .title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Heebo', sans-serif;
     font-size: 1rem;
 }
 
@@ -603,7 +613,7 @@ button {
 }
 
 @media (max-width: 468px) {
-    
+
     #dropdown-value {
         display: none;
     }
