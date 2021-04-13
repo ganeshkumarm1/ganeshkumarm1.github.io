@@ -5,8 +5,9 @@ h1:lang(ta), h2:lang(ta), h3:lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), .n
     font-weight: bold;
 }
 
-.fa-globe {
+.fa-globe-asia {
     margin-right: 7px;
+    font-size: 1rem;
     color: var(--white);
 }
 
