@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 h1:lang(ta), h2:lang(ta), h3:lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), .navbar-brand:lang(ta) {
     font-weight: bold;
 }
+
+
 
 .fa-globe-asia {
     opacity: 0.75;
@@ -386,7 +389,7 @@ button {
 
 
 .home {
-    padding: 6rem 6rem;
+    padding: 5rem 6rem;
 }
 
 .social {
@@ -414,10 +417,14 @@ button {
     font-family: 'Poppins', sans-serif;
 }
 
-#intro h1 {
+#intro h1, #intro .comma {
     font-size: 5rem;
     letter-spacing: -2px;
     line-height: 1.1;
+}
+
+#intro .comma {
+    font-family: 'Dela Gothic One', sans-serif !important;
 }
 
 #intro h2 {
@@ -698,7 +705,7 @@ button {
         padding: 2rem 0.5rem !important;
     }
 
-    #intro h1 {
+    #intro h1, #intro .comma {
         font-size: 3.25rem;
         letter-spacing: -1px;
         line-height: 1;
