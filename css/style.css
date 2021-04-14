@@ -110,7 +110,7 @@ body {
 
 section {
     position: relative;
-    padding-top: 6em;
+    padding-top: 5.5em;
     overflow-y: scroll;
     /*scroll-snap-align: end;*/
 }
@@ -174,13 +174,13 @@ a:hover {
 }
 
 :root {
-    --black: #1b1b1b;
+    --black: #1D1D1D;
     --black-light: #1d1d1d;
     --white: #fff;
     --grey: #515152;
     --light-grey: #636363;
-    --primary: #09FDDA;
-    --secondary: #FC0C57;
+    --primary: #09FDD9;
+    --secondary: #FE0A54;
 }
 
 .bg {
@@ -386,7 +386,7 @@ button {
 
 
 .home {
-    padding: 6rem 10rem;
+    padding: 6rem 6rem;
 }
 
 .social {
