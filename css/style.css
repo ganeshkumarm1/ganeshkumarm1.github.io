@@ -20,11 +20,13 @@ h1:lang(ta), h2:lang(ta), h3:lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), .n
 }
 
 .dropdown-toggle {
-    font-family: 'Heebo', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     font-weight: bold;
     letter-spacing: 1.1px;
     color: var(--white) !important;
     border: none !important;
+    padding-left: 0px !important;
+    margin-top: 3px;
 }
 
 .dropdown-menu li a {
@@ -389,7 +391,10 @@ button {
 
 
 .home {
-    padding: 5rem 6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 6rem;
 }
 
 .social {
@@ -464,7 +469,7 @@ button {
     transform: translate(30px, 30px);
 }
 
-.optum-ase {
+.optum-ase, .optum-se {
     margin-left: 30px;
 }
 
@@ -599,6 +604,8 @@ button {
 }
 
 .next-page {
+    position: absolute;
+    top: 90%;
     animation: bounce 1s infinite alternate;
     -webkit-animation: bounce 1s infinite alternate;
     display: none;
@@ -622,7 +629,7 @@ button {
 }
 
 @media (max-width: 1200px) {
-    .optum-ase {
+    .optum-ase, .optum {
         margin-left: 0px;
         margin-top: 20px !important;
         border-left: solid 5px var(--secondary);
@@ -698,15 +705,18 @@ button {
     }
 
     .home {
-        padding: 5rem 2rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-left: 1.5rem;
     }
-
+    
     nav {
         padding: 2rem 0.5rem !important;
     }
 
     #intro h1, #intro .comma {
-        font-size: 3.25rem;
+        font-size: 2.8rem;
         letter-spacing: -1px;
         line-height: 1;
     }
