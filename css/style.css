@@ -629,7 +629,7 @@ button {
 }
 
 @media (max-width: 1200px) {
-    .optum-ase, .optum {
+    .optum-ase, .optum-se {
         margin-left: 0px;
         margin-top: 20px !important;
         border-left: solid 5px var(--secondary);
@@ -760,7 +760,7 @@ button {
         font-size: 2.5rem !important;
     }
 
-    .optum-ase {
+    .optum-ase, .optum-se {
         margin-left: 0px;
         margin-top: 20px !important;
         border-left: solid 5px var(--secondary);
