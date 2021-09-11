@@ -526,7 +526,7 @@ button {
 }
 
 .skill.system-design .bar {
-    background: linear-gradient(to right, var(--secondary) 60%, #222222 40%);
+    background: linear-gradient(to right, var(--secondary) 80%, #222222 40%);
 }
 
 #blogs img {
