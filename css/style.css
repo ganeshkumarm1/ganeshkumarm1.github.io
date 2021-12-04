@@ -16,7 +16,7 @@ h1:lang(ta), h2:lang(ta), h3:lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), .n
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
     height: 10px;
     width: 10px;
-    margin-left: 15px;
+    margin-right: 10px;
     transform: scale(1);
     animation: pulse-black 2s infinite;
 }
@@ -153,7 +153,7 @@ section {
 }
 
 #contact {
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
     height: 100vh !important;
 }
 
@@ -320,16 +320,21 @@ span.title {
 }
 
 #about .title {
-    top: 85% !important;
+    top: 65% !important;
+}
+
+#skills .title {
+    top: 90% !important;
 }
 
 #contact .title {
-    top: 85% !important;
+    top: 65% !important;
 }
 
 #blogs .title {
     top: 100% !important;
 }
+
 
 .primary {
     color: var(--primary);
@@ -594,6 +599,10 @@ button {
     display: block;
 }
 
+#name {
+    margin-top: 0px !important;
+}
+
 #contact input, #contact textarea {
     margin-top: 25px;
     border-radius: 0;
@@ -733,7 +742,7 @@ button {
 
     .home {
         position: absolute;
-        top: 40%;
+        top: 43%;
         transform: translateY(-50%);
         padding-left: 1.5rem;
     }
