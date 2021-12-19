@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
-
-h1:lang(ta), h2:lang(ta), h3:lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), .navbar-brand:lang(ta) {
+h1:lang(ta),
+h2:lang(ta),
+h3:lang(ta),
+h4:lang(ta),
+h5:lang(ta),
+h6:lang(ta),
+.navbar-brand:lang(ta) {
     font-weight: bold;
 }
 
@@ -25,24 +30,22 @@ h1:lang(ta), h2:lang(ta), h3:lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), .n
     background: var(--primary);
     box-shadow: 0 0 0 0 var(var(--primary));
     animation: pulse-green 2s infinite;
-  }
-  
-  @keyframes pulse-green {
+}
+
+@keyframes pulse-green {
     0% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
     }
-    
     70% {
-      transform: scale(1);
-      box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
     }
-    
     100% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
     }
-  }
+}
 
 .fa-globe-asia {
     opacity: 0.75;
@@ -116,6 +119,7 @@ body {
     top: 0;
     width: 16vmin;
 }
+
 .loader:after {
     animation: spin 3s infinite linear;
     border: solid 2vmin transparent;
@@ -137,7 +141,9 @@ body {
     }
 }
 
-#about, #skills, #blogs {
+#about,
+#skills,
+#blogs {
     height: auto !important;
 }
 
@@ -188,6 +194,7 @@ a:hover {
 .navbar-bg {
     background-color: var(--black-light);
 }
+
 #menu-toggle {
     padding-right: 10px !important;
     padding-left: 10px !important;
@@ -224,7 +231,17 @@ a:hover {
     background-color: var(--black);
 }
 
-p, h1, h2, h3, h4, h5, h6, li, span, div, .list-group a {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+span,
+div,
+.list-group a {
     color: var(--white);
 }
 
@@ -233,12 +250,13 @@ a .sidebar-heading {
     transition: 0.3s ease-in-out;
 }
 
-
 ul {
     list-style: none;
 }
 
-button:focus, input:focus, textarea:focus {
+button:focus,
+input:focus,
+textarea:focus {
     outline: none !important;
     box-shadow: none !important;
 }
@@ -264,7 +282,8 @@ nav {
     z-index: 2000000;
 }
 
-#sidebar-wrapper.bg-dark, #sidebar-wrapper .bg-dark {
+#sidebar-wrapper.bg-dark,
+#sidebar-wrapper .bg-dark {
     background-color: var(--black-light) !important;
 }
 
@@ -300,7 +319,6 @@ nav {
     font-size: 1.5rem !important;
 }
 
-
 span.title {
     opacity: 0.05;
     color: #888;
@@ -335,7 +353,6 @@ span.title {
     top: 100% !important;
 }
 
-
 .primary {
     color: var(--primary);
 }
@@ -358,7 +375,6 @@ span.title {
     border: none;
 }
 
-
 .no-padding {
     padding: 0 0 !important;
 }
@@ -369,11 +385,13 @@ span.title {
     font-family: 'Poppins', sans-serif;
 }
 
-
-#about, #skills, #contact, #blogs {
+#about,
+#skills,
+#contact,
+#blogs {
     position: relative;
-    padding-left:  12rem;
-    padding-right:  12rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
 }
 
 .copyright {
@@ -392,8 +410,10 @@ span.title {
 }
 
 ::-webkit-scrollbar {
-    width: 0; /* Remove scrollbar space */
-    background: transparent; /* Optional: just make scrollbar invisible */
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
 }
 
 button {
@@ -409,11 +429,13 @@ button {
     color: var(--secondary);
 }
 
-.scroll-container button span, .scroll-container button {
+.scroll-container button span,
+.scroll-container button {
     transition: 0.5s ease-in-out !important;
 }
 
-.scroll-container button:hover, .scroll-container button:hover span {
+.scroll-container button:hover,
+.scroll-container button:hover span {
     border-color: transparent !important;
 }
 
@@ -425,7 +447,6 @@ button {
 .scroll-container button:hover span {
     color: var(--white) !important;
 }
-
 
 .home {
     position: absolute;
@@ -439,12 +460,10 @@ button {
     margin-left: 5px;
 }
 
-
 .social span {
     font-size: 1.35rem;
     margin-right: 17px;
     color: var(--light-grey);
-
 }
 
 .social span {
@@ -459,7 +478,8 @@ button {
     font-family: 'Poppins', sans-serif;
 }
 
-#intro h1, #intro .comma {
+#intro h1,
+#intro .comma {
     font-size: 5rem;
     letter-spacing: -2px;
     line-height: 1.1;
@@ -479,7 +499,10 @@ button {
     margin-top: 20px !important;
 }
 
-#about h4, #about .duration, #blogs h4, #blogs .pub-date {
+#about h4,
+#about .duration,
+#blogs h4,
+#blogs .pub-date {
     font-family: 'Poppins', sans-serif !important;
 }
 
@@ -487,7 +510,8 @@ button {
     font-family: 'Heebo', sans-serif !important;
 }
 
-#about .duration, #blogs .pub-date {
+#about .duration,
+#blogs .pub-date {
     opacity: 0.5;
 }
 
@@ -495,7 +519,8 @@ button {
     font-size: 0.9rem;
 }
 
-#about .description, #blogs .description {
+#about .description,
+#blogs .description {
     font-family: 'Heebo', sans-serif;
     font-size: 1.1rem;
 }
@@ -506,21 +531,22 @@ button {
     transform: translate(30px, 30px);
 }
 
-.optum-se, .abco-intern, .scaler-writer {
+.optum-se,
+.abco-intern,
+.scaler-writer {
     margin-left: 30px;
 }
-
 
 #skills .subtitle {
     margin-bottom: 15px;
 }
 
-
 .skill {
     margin-bottom: 20px;
 }
 
-.blog, .box {
+.blog,
+.box {
     transform: translateX(-5px);
 }
 
@@ -528,7 +554,8 @@ button {
     float: right;
 }
 
-.skill .level, .skill .title {
+.skill .level,
+.skill .title {
     font-family: 'Heebo', sans-serif;
     font-size: 1rem;
 }
@@ -538,7 +565,7 @@ button {
     width: 100%;
 }
 
-.skill > .row {
+.skill>.row {
     margin-bottom: 10px;
 }
 
@@ -566,16 +593,22 @@ button {
     background: linear-gradient(to right, var(--secondary) 80%, #222222 40%);
 }
 
+.skill.content-writing .bar {
+    background: linear-gradient(to right, var(--secondary) 70%, #222222 30%);
+}
+
 #blogs img {
     width: 100%;
 }
-
 
 #blogs .content {
     padding: 1rem 1.2rem;
 }
 
-.blogs, .experience, .education, form {
+.blogs,
+.experience,
+.education,
+form {
     margin-left: 5px !important;
 }
 
@@ -603,7 +636,8 @@ button {
     margin-top: 0px !important;
 }
 
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
     margin-top: 25px;
     border-radius: 0;
     background-color: var(--black);
@@ -618,7 +652,8 @@ button {
     height: 150px;
 }
 
-#contact input:focus, #contact textarea:focus {
+#contact input:focus,
+#contact textarea:focus {
     border-color: var(--secondary);
 }
 
@@ -628,7 +663,8 @@ button {
     padding-right: 30px !important;
 }
 
-.down-arrow-text, .down-arrow-icon {
+.down-arrow-text,
+.down-arrow-icon {
     text-align: center;
     opacity: 0.2;
 }
@@ -660,6 +696,7 @@ button {
         transform: translateY(-15px);
     }
 }
+
 @-webkit-keyframes bounce {
     from {
         transform: translateY(0px);
@@ -670,44 +707,40 @@ button {
 }
 
 @media (max-width: 1200px) {
-    .optum-ase, .optum-se, .scaler-writer, .abco-intern {
+    .optum-ase,
+    .optum-se,
+    .scaler-writer,
+    .abco-intern {
         margin-left: 0px;
         margin-top: 20px !important;
         border-left: solid 5px var(--secondary);
     }
-
     .blog {
         margin-bottom: 30px;
     }
 }
 
 @media (max-width: 468px) {
-
     #dropdown-value {
         display: none;
     }
-
     #sidebar-wrapper .list-group-item {
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
-
     .navbar-brand-logo {
         width: 25px;
         height: 25px;
     }
-
     .navbar-brand {
         font-size: 1.2rem !important;
     }
 }
 
 @media (max-width: 380px) {
-
     #dropdown-value {
         display: none;
     }
-
     #sidebar-wrapper .list-group-item {
         padding-top: 0.5em;
         padding-bottom: 0.5em;
@@ -728,110 +761,100 @@ button {
     #dropdown-value {
         display: none;
     }
-
     #sidebar-wrapper .list-group-item {
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
-
-    #about, #skills, #experience, #contact, #blogs {
+    #about,
+    #skills,
+    #experience,
+    #contact,
+    #blogs {
         position: relative;
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
-
     .home {
         position: absolute;
         top: 43%;
         transform: translateY(-50%);
         padding-left: 1.5rem;
     }
-    
     nav {
         padding: 2rem 0.5rem !important;
     }
-
-    #intro h1, #intro .comma {
+    #intro h1,
+    #intro .comma {
         font-size: 2.8rem;
         letter-spacing: -1px;
         line-height: 1;
     }
-
     #intro h2 {
         font-size: 1.1rem;
     }
-
     #intro h1:lang(ta) {
         font-size: 2.5rem !important;
     }
-
     #intro h2:lang(ta) {
         font-size: 1rem !important;
     }
-
     .navbar-brand:lang(ta) {
         font-size: 1rem !important;
     }
-
     .short-nav {
         display: none;
     }
-
     span.title {
         display: none !important;
     }
-
     .navbar-shrink {
         padding: 0.5em 0.5em !important;
         background: #272727;
         transition: 0.5s ease-in-out;
     }
-
     .menu {
         font-size: 1.3rem;
     }
-
-
-    #about .subtitle, #blogs .subtitle, #contact .subtitle {
+    #about .subtitle,
+    #blogs .subtitle,
+    #contact .subtitle {
         font-size: 2.5rem !important;
     }
-
-    .optum-ase, .optum-se {
+    .optum-ase,
+    .optum-se {
         margin-left: 0px;
         margin-top: 20px !important;
         border-left: solid 5px var(--secondary);
     }
-
     .skill .bar {
         height: 23px;
     }
-
     .blog {
         margin-bottom: 20px;
     }
-
     #blogs .view-more {
         margin-top: 20px !important;
     }
-
     .social span {
         font-size: 1.35rem;
         margin-right: 20px;
     }
-
-    #about, #skills, #blogs {
+    #about,
+    #skills,
+    #blogs {
         height: auto !important;
     }
-
-    #home, #contact {
+    #home,
+    #contact {
         height: 100vh;
     }
-
     #sidebar-wrapper .list-group-item {
         font-size: 1.15rem;
     }
-
-    .blogs, .experience, .education, form {
+    .blogs,
+    .experience,
+    .education,
+    form {
         margin-left: 0px !important;
     }
 }
