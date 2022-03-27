@@ -350,7 +350,7 @@ span.title {
 }
 
 #blogs .title {
-    top: 100% !important;
+    top: 50% !important;
 }
 
 .primary {
@@ -369,6 +369,12 @@ span.title {
     background-color: #1f1f1f;
     padding: 2em 2em !important;
     border-left: solid 5px var(--secondary);
+}
+
+.scaler-blogs .box {
+    border-radius: 0;
+    border-left: solid 5px var(--secondary);
+    margin-bottom: 20px;
 }
 
 .no-border {
