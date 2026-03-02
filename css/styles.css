@@ -340,7 +340,7 @@ main {
 
 .hero__avatar {
   width: 100%;
-  max-width: 400px;
+  max-width: 330px;
   height: auto;
   object-fit: contain;
   border-radius: 12px;
@@ -370,7 +370,7 @@ main {
   }
 
   .hero__avatar {
-    max-width: 350px;
+    max-width: 300px;
   }
 
   .hero {
@@ -491,7 +491,7 @@ main {
 
 .freelance-item:last-child {
   border-bottom: none;
-  padding-bottom: 0px;;
+  padding-bottom: var(--space-2xl);
 }
 
 .freelance-item:hover {
@@ -564,6 +564,7 @@ main {
 .section--projects {
   padding-left: 0;
   padding-right: 0;
+  padding-top: 0;
 }
 
 .projects-grid {
@@ -661,7 +662,7 @@ main {
 
 .writing-item:last-child {
   border-bottom: none;
-  padding-bottom: 0px;
+  padding-bottom: var(--space-2xl);
 }
 
 .writing-item:hover {
@@ -759,6 +760,10 @@ main {
   }
 }
 
+#find-me-online {
+  padding-top: 0;
+}
+
 /* Connect — social icons */
 .section--connect {
   padding-bottom: var(--space-3xl);
@@ -813,7 +818,7 @@ main {
 }
 
 /* Responsive */
-@media (max-width: 640px) {
+@media (max-width: 640px), (max-width: 1024px) {
   main {
     padding: 0;
     margin-left: 20px;
