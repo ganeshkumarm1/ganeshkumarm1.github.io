@@ -1,42 +1,42 @@
 [
   {
-    "title": "MO’s Algorithm — Range Queries Made Easy",
-    "excerpt": "An Efficient Way to Solve Offline Range Query Problems",
+    "title": "MO's Algorithm — Range Queries Made Easy",
+    "excerpt": "Break down MO's algorithm step by step and see how reordering queries with block decomposition turns brute-force range problems into elegant O(N√N) solutions.",
     "url": "https://medium.com/javarevisited/mos-algorithm-range-queries-made-easy-6c35047369ca",
     "date": "2020-08-04",
     "displayDate": "Aug 2020"
   },
   {
     "title": "Designing Stock Broker Service",
-    "excerpt": "Designing highly scalable Stock Broker Service",
+    "excerpt": "How to handle millions of concurrent trades with low latency — covering order matching engines, event sourcing, and real-time price feeds at scale.",
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/13.%20Design%20Stock%20Broker%20Service/StockBrokerService.md",
     "date": "2026-02-03",
     "displayDate": "Feb 2026"
   },
   {
     "title": "Designing OTP Service",
-    "excerpt": "Designing a secure OTP Service",
+    "excerpt": "Building a secure, rate-limited OTP system that handles generation, delivery, and verification while defending against brute-force and replay attacks.",
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/12.%20Design%20OTP%20Service/OTP%20Service.md",
     "date": "2026-01-11",
     "displayDate": "Jan 2026"
   },
   {
     "title": "MVC Design Pattern",
-    "excerpt": "Build modular web applications using MVC pattern",
+    "excerpt": "A practical walkthrough of Model-View-Controller — how separating concerns makes web applications easier to test, maintain, and scale.",
     "url": "https://www.scaler.com/topics/mvc-design-pattern/",
     "date": "2024-04-25",
     "displayDate": "Apr 2024"
   },
   {
     "title": "Flyweight Design Pattern",
-    "excerpt": "Build low memory footprint applications using Flyweight pattern",
+    "excerpt": "Reduce memory footprint by sharing common state across thousands of objects — with real examples showing when Flyweight shines and when it's overkill.",
     "url": "https://www.scaler.com/topics/design-patterns/flyweight-design-pattern/",
     "date": "2024-04-26",
     "displayDate": "Apr 2024"
   },
   {
     "title": "Designing Online Shopping System",
-    "excerpt": "Designing a scalable e-commerce system",
+    "excerpt": "End-to-end system design for an e-commerce platform — from product catalog and cart management to checkout, payments, and inventory consistency.",
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/14.%20Design%20Online%20Shopping%20System/OnlineShoppingSystem.md",
     "date": "2026-02-24",
     "displayDate": "Feb 2026"

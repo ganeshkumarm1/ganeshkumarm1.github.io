@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Ganesh Kumar Marimuthu</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  <style>
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      text-align: center;
+      padding: var(--space-xl);
+    }
+    .error-page__code {
+      font-size: clamp(4rem, 10vw, 8rem);
+      font-weight: 800;
+      color: var(--color-border);
+      line-height: 1;
+      margin: 0;
+    }
+    .error-page__message {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+      margin: var(--space-md) 0 var(--space-xl);
+    }
+    .error-page__link {
+      display: inline-block;
+      padding: var(--space-md) var(--space-xl);
+      background: var(--color-text);
+      color: var(--color-bg) !important;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      transition: background 0.15s ease;
+    }
+    .error-page__link:hover {
+      background: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+  <main class="error-page">
+    <p class="error-page__code">404</p>
+    <p class="error-page__message">This page doesn't exist. Maybe it wandered off.</p>
+    <a href="/" class="error-page__link">Back to Home</a>
+  </main>
+</body>
+</html>

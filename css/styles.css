@@ -11,7 +11,7 @@
   --color-accent-hover: #9b2c2c;
   --color-border: #e5e7eb;
 
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -30,6 +30,46 @@
   --transition-fast: 120ms ease;
   --transition-base: 150ms ease;
   --transition-slow: 400ms ease;
+}
+
+/* Dark mode — class-based via toggle */
+html[data-theme="dark"] {
+  --color-bg: #111111;
+  --color-bg-subtle: #1a1a1a;
+  --color-text: #e5e5e5;
+  --color-text-muted: #9ca3af;
+  --color-accent: #ef4444;
+  --color-accent-hover: #f87171;
+  --color-border: #2a2a2a;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-md);
+  background: var(--color-accent);
+  color: #fff !important;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 0 0 6px 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 999;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 *,
@@ -91,6 +131,8 @@ a:focus-visible {
   font-size: 1.25rem;
   color: var(--color-text);
   letter-spacing: -0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav__logo:hover {
@@ -100,6 +142,10 @@ a:focus-visible {
 .nav__logo-dot {
   color: var(--color-accent);
   font-size: 2.25rem;
+  line-height: 0;
+  position: relative;
+  top: 0em;
+  left: 2px;
 }
 
 .nav__list {
@@ -108,6 +154,7 @@ a:focus-visible {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-xl);
 }
 
@@ -119,6 +166,10 @@ a:focus-visible {
 
 .nav__list a:hover {
   color: var(--color-text);
+}
+
+.nav__list a.nav--active {
+  color: var(--color-accent);
 }
 
 .nav__toggle {
@@ -156,6 +207,61 @@ a:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.theme-toggle__icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle--spin .theme-toggle__icon {
+  transform: rotate(360deg) scale(1.15);
+}
+
+.theme-toggle__icon--sun {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle__icon--sun {
+  display: block;
+}
+
+html[data-theme="dark"] .theme-toggle__icon--moon {
+  display: none;
+}
+
+/* Avatar swap for dark mode */
+.hero__avatar--dark {
+  display: none;
+}
+
+html[data-theme="dark"] .hero__avatar--light {
+  display: none;
+}
+
+html[data-theme="dark"] .hero__avatar--dark {
+  display: block;
 }
 
 .nav__store .external-icon {
@@ -239,27 +345,37 @@ main {
 .hero__title-wrapper {
   position: relative;
   display: inline-block;
+  font-weight: 800;
+  clip-path: inset(0 100% 0 0);
+  animation: nameReveal 0.8s cubic-bezier(0.65, 0, 0.35, 1) 0.3s forwards;
+}
+
+@keyframes nameReveal {
+  to {
+    clip-path: inset(0 0% 0 0);
+  }
 }
 
 .hero__title-accent {
   position: absolute;
   left: 0;
-  bottom: 0.1em;
-  width: 100%;
+  bottom: 0;
+  width: 6.5ch;
   height: 4px;
   background: var(--color-accent);
   border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: accentGrow 0.5s ease 1s forwards;
 }
 
-.hero__title-accent {
-  position: absolute;
-  left: 0;
-  bottom: 0.1em;
-  width: 5.5ch;
-  height: 4px;
-  background: var(--color-accent);
-  border-radius: 2px;
+@keyframes accentGrow {
+  to {
+    transform: scaleX(1);
+  }
 }
+
+/* hero subtitle follows */
 
 .hero__subtitle {
   font-size: 1.125rem;
@@ -390,6 +506,16 @@ main {
 .company-logo:hover {
   opacity: 0.8;
   filter: grayscale(0%);
+}
+
+html[data-theme="dark"] .company-logo {
+  filter: grayscale(100%) brightness(0) invert(1);
+  opacity: 0.5;
+}
+
+html[data-theme="dark"] .company-logo:hover {
+  filter: grayscale(0%) brightness(1) invert(0);
+  opacity: 1;
 }
 
 /* Experience — bento grid */
@@ -802,6 +928,100 @@ main {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
+}
+
+/* Skills section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-xl);
+}
+
+.skills-group__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skills-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.skills-tags li {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 100px;
+  font-weight: 500;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.skills-tags li:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Skeleton loading */
+.skeleton-card {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.skeleton-row {
+  display: flex;
+  gap: var(--space-2xl);
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.skeleton-line {
+  height: 14px;
+  background: var(--color-border);
+  border-radius: 4px;
+  width: 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-line--title {
+  width: 60%;
+  height: 18px;
+}
+
+.skeleton-line--short {
+  width: 30%;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Mobile nav backdrop */
+.nav__backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 98;
+}
+
+.nav__backdrop.active {
+  display: block;
 }
 
 /* Footer */
