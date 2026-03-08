@@ -18,20 +18,24 @@
   <meta property="og:url" content="https://ganeshkumarm1.github.io/">
   <meta property="og:title" content="Ganesh Kumar Marimuthu - Software Engineer | Portfolio">
   <meta property="og:description" content="Software engineer focused on building scalable systems and clean code. Experience at Amazon, Optum, and Advisory Board.">
-  <meta property="og:image" content="https://ganeshkumarm1.github.io/images/Avatar.png">
+  <meta property="og:image" content="https://ganeshkumarm1.github.io/images/Avatar.webp">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ganeshkumarm1.github.io/">
   <meta property="twitter:title" content="Ganesh Kumar Marimuthu - Software Engineer | Portfolio">
   <meta property="twitter:description" content="Software engineer focused on building scalable systems and clean code. Experience at Amazon, Optum, and Advisory Board.">
-  <meta property="twitter:image" content="https://ganeshkumarm1.github.io/images/Avatar.png">
+  <meta property="twitter:image" content="https://ganeshkumarm1.github.io/images/Avatar.webp">
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://ganeshkumarm1.github.io/">
   
   <!-- Favicon — emoji fallback, no file needed -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  
+  <!-- Preload hero avatars -->
+  <link rel="preload" href="images/Avatar.webp" as="image" type="image/webp">
+  <link rel="preload" href="images/AvatarDark.webp" as="image" type="image/webp">
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/styles.css">
@@ -52,7 +56,7 @@
     "name": "Ganesh Kumar Marimuthu",
     "jobTitle": "Software Engineer",
     "url": "https://ganeshkumarm1.github.io",
-    "image": "https://ganeshkumarm1.github.io/images/Avatar.png",
+    "image": "https://ganeshkumarm1.github.io/images/Avatar.webp",
     "description": "Software engineer focused on building scalable systems and clean code",
     "worksFor": [
       {
@@ -155,6 +159,9 @@
   </script>
 </head>
 <body>
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__dot"></div>
+  </div>
   <!-- <a href="#main" class="skip-link">Skip to content</a> -->
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
@@ -201,8 +208,8 @@
         </div>
         
         <div class="hero__illustration">
-          <img src="images/Avatar.png" alt="Ganesh Kumar Marimuthu" class="hero__avatar hero__avatar--light">
-          <img src="images/AvatarDark.png" alt="Ganesh Kumar Marimuthu" class="hero__avatar hero__avatar--dark">
+          <img src="images/Avatar.webp" alt="Ganesh Kumar Marimuthu" class="hero__avatar hero__avatar--light" loading="eager" fetchpriority="high">
+          <img src="images/AvatarDark.webp" alt="Ganesh Kumar Marimuthu" class="hero__avatar hero__avatar--dark" loading="eager" fetchpriority="high">
         </div>
       </div>
       

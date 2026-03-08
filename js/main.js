@@ -2,6 +2,20 @@
  * Portfolio: year in footer + dynamic writing section + dynamic projects section.
  */
 (function () {
+  // Page loader — skip on fast loads (localhost)
+  var loader = document.querySelector('.page-loader');
+  if (loader) {
+    if (document.readyState === 'complete') {
+      // Already loaded (cached/fast) — kill it immediately
+      loader.classList.add('page-loader--done');
+    } else {
+      window.addEventListener('load', function () {
+        // CSS animation handles the reveal; JS is just a safety net
+        setTimeout(function () { loader.classList.add('page-loader--done'); }, 1800);
+      });
+    }
+  }
+
   var yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
