@@ -7,14 +7,14 @@
     "displayDate": "Aug 2020"
   },
   {
-    "title": "Designing Stock Broker Service",
+    "title": "Designing Zerodha",
     "excerpt": "How to handle millions of concurrent trades with low latency — covering order matching engines, event sourcing, and real-time price feeds at scale.",
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/13.%20Design%20Stock%20Broker%20Service/StockBrokerService.md",
     "date": "2026-02-03",
     "displayDate": "Feb 2026"
   },
   {
-    "title": "Designing OTP Service",
+    "title": "Designing MFA System",
     "excerpt": "Building a secure, rate-limited OTP system that handles generation, delivery, and verification while defending against brute-force and replay attacks.",
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/12.%20Design%20OTP%20Service/OTP%20Service.md",
     "date": "2026-01-11",
@@ -35,7 +35,7 @@
     "displayDate": "Apr 2024"
   },
   {
-    "title": "Designing Online Shopping System",
+    "title": "Designing Amazon",
     "excerpt": "End-to-end system design for an e-commerce platform — from product catalog and cart management to checkout, payments, and inventory consistency.",
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/14.%20Design%20Online%20Shopping%20System/OnlineShoppingSystem.md",
     "date": "2026-02-24",
