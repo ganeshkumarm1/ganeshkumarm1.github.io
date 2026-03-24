@@ -47,5 +47,12 @@
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/15.%20Design%20Google%20Maps/GoogleMaps.md",
     "date": "2026-03-10",
     "displayDate": "Mar 2026"
+  }, 
+  {
+    "title": "Designing Stripe",
+    "excerpt": "Bulding highly scalable and secure online payment system with end-to-end transcation workflow for an online order",
+    "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/16.%20Design%20Payment%20System/PaymentSystem.md",
+    "date": "2026-03-24",
+    "displayDate": "Mar 2026"
   }
 ]
