@@ -1072,6 +1072,45 @@ html[data-theme="dark"] .company-logo:hover {
   display: block;
 }
 
+/* Chai4Me button */
+.chai-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform 0.2s ease;
+}
+
+.chai-btn:hover {
+  border-color: var(--color-text-muted);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.chai-btn__logo {
+  height: 20px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+html[data-theme="dark"] .chai-btn__logo {
+  filter: invert(1);
+}
+
+.chai-btn__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  margin-top: 4px;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--color-border);
