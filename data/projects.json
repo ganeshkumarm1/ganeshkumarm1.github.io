@@ -17,6 +17,17 @@
       "github": "https://github.com/ganeshkumarm1/many-to-one"
     },
     "featured": true,
+    "order": 3
+  },
+  {
+    "name": "Am I Replaceable",
+    "description": "An AI-powered roast tool that tells you how replaceable you are — with three levels of mercy: Nice, Honest, or Brutal.",
+    "tech": "NextJS, LLM",
+    "links": {
+      "github": "https://github.com/ganeshkumarm1/am-i-replaceable",
+      "live": "https://am-i-replaceable-xi.vercel.app/"
+    },
+    "featured": "true",
     "order": 2
   }
 ]

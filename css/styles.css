@@ -790,6 +790,30 @@ html[data-theme="dark"] .company-logo:hover {
   transition: color var(--transition-fast), transform var(--transition-fast);
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.project-link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.project-link:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .project-card__links a:hover {
