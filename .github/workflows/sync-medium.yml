@@ -1,0 +1,31 @@
+name: Sync Medium Articles
+
+on:
+  schedule:
+    - cron: '30 4 * * *'  # Daily at 4:30 AM UTC
+  workflow_dispatch:       # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch and update writings.json
+        run: python scripts/sync_medium.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/writings.json
+          git diff --cached --quiet || git commit -m "chore: sync Medium articles"
+          git push

@@ -836,6 +836,25 @@ html[data-theme="dark"] .company-logo:hover {
   font-weight: 500;
 }
 
+.project-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: auto;
+}
+
+.project-card__language {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 2px var(--space-sm);
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
 @media (max-width: 640px) {
   .projects-grid {
     grid-template-columns: 1fr;

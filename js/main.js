@@ -59,7 +59,10 @@
                 </div>
               </div>
               <p class="project-card__description">${project.description}</p>
-              <p class="project-card__tech">${project.tech}</p>
+              <div class="project-card__footer">
+                ${project.tech ? `<span class="project-card__tech">${project.tech}</span>` : ''}
+                ${project.language ? `<span class="project-card__language">${project.language}</span>` : ''}
+              </div>
             </article>
           `;
         }).join('');
@@ -70,48 +73,56 @@
       });
   }
 
-  // Load and render writing section
+  // Load and render writing section — merges all files in data/writings/
   function loadWritings() {
     var writingList = document.getElementById('writing-list');
     if (!writingList) return;
 
-    fetch('data/writings.json')
-      .then(function(response) {
-        if (!response.ok) throw new Error('Failed to load writings');
-        return response.json();
-      })
-      .then(function(writings) {
-        // Sort by date descending (newest first) and take only first 5
-        var sortedWritings = writings
-          .sort(function(a, b) {
-            return new Date(b.date) - new Date(a.date);
-          })
-          .slice(0, 5);
+    var sources = [
+      'data/writings/medium_writings.json',
+      'data/writings/scaler_writings.json',
+      'data/writings/sweetcodey_writings.json'
+      // Add more sources here as you create them, e.g.:
+      // 'data/writings/scaler_writings.json'
+    ];
 
-        writingList.innerHTML = sortedWritings.map(function(writing) {
-          return `
-            <article class="writing-item" itemscope itemtype="https://schema.org/BlogPosting">
-              <time class="writing-item__date" datetime="${writing.date}" itemprop="datePublished">${writing.displayDate}</time>
-              <div class="writing-item__content">
-                <h3 class="writing-item__title" itemprop="headline">
-                  <a href="${writing.url}" target="_blank" rel="noopener noreferrer" itemprop="url">
-                    <span itemprop="name">${writing.title}</span>
-                    <svg class="writing-item__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                      <path d="M1 8h14M9 2l6 6-6 6"/>
-                    </svg>
-                  </a>
-                </h3>
-                <p class="writing-item__excerpt" itemprop="description">${writing.excerpt}</p>
-                <meta itemprop="author" content="Ganesh Kumar Marimuthu">
-              </div>
-            </article>
-          `;
-        }).join('');
-      })
-      .catch(function(error) {
-        console.error('Error loading writings:', error);
+    Promise.all(sources.map(function(src) {
+      return fetch(src)
+        .then(function(r) { return r.ok ? r.json() : []; })
+        .catch(function() { return []; });
+    }))
+    .then(function(results) {
+      var all = [].concat.apply([], results);
+
+      var sorted = all
+        .sort(function(a, b) { return new Date(b.date) - new Date(a.date); })
+        .slice(0, 5);
+
+      if (!sorted.length) {
         writingList.innerHTML = '<p style="color: var(--color-text-muted); text-align: center;">Unable to load articles at this time.</p>';
-      });
+        return;
+      }
+
+      writingList.innerHTML = sorted.map(function(writing) {
+        return `
+          <article class="writing-item" itemscope itemtype="https://schema.org/BlogPosting">
+            <time class="writing-item__date" datetime="${writing.date}" itemprop="datePublished">${writing.displayDate}</time>
+            <div class="writing-item__content">
+              <h3 class="writing-item__title" itemprop="headline">
+                <a href="${writing.url}" target="_blank" rel="noopener noreferrer" itemprop="url">
+                  <span itemprop="name">${writing.title}</span>
+                  <svg class="writing-item__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M1 8h14M9 2l6 6-6 6"/>
+                  </svg>
+                </a>
+              </h3>
+              <p class="writing-item__excerpt" itemprop="description">${writing.excerpt}</p>
+              <meta itemprop="author" content="Ganesh Kumar Marimuthu">
+            </div>
+          </article>
+        `;
+      }).join('');
+    });
   }
 
   // Theme toggle

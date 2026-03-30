@@ -1,12 +1,5 @@
 [
   {
-    "title": "MO's Algorithm — Range Queries Made Easy",
-    "excerpt": "Break down MO's algorithm step by step and see how reordering queries with block decomposition turns brute-force range problems into elegant O(N√N) solutions.",
-    "url": "https://medium.com/javarevisited/mos-algorithm-range-queries-made-easy-6c35047369ca",
-    "date": "2020-08-04",
-    "displayDate": "Aug 2020"
-  },
-  {
     "title": "Designing Zerodha",
     "excerpt": "How to handle millions of concurrent trades with low latency — covering order matching engines, event sourcing, and real-time price feeds at scale.",
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/13.%20Design%20Stock%20Broker%20Service/StockBrokerService.md",
@@ -28,13 +21,6 @@
     "displayDate": "Apr 2024"
   },
   {
-    "title": "Flyweight Design Pattern",
-    "excerpt": "Reduce memory footprint by sharing common state across thousands of objects — with real examples showing when Flyweight shines and when it's overkill.",
-    "url": "https://www.scaler.com/topics/design-patterns/flyweight-design-pattern/",
-    "date": "2024-04-26",
-    "displayDate": "Apr 2024"
-  },
-  {
     "title": "Designing Amazon",
     "excerpt": "End-to-end system design for an e-commerce platform — from product catalog and cart management to checkout, payments, and inventory consistency.",
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/14.%20Design%20Online%20Shopping%20System/OnlineShoppingSystem.md",
@@ -53,13 +39,6 @@
     "excerpt": "Bulding highly scalable and secure online payment system with end-to-end transcation workflow for an online order",
     "url": "https://github.com/SweetCodey/system-design-masterclass/blob/main/16.%20Design%20Payment%20System/PaymentSystem.md",
     "date": "2026-03-24",
-    "displayDate": "Mar 2026"
-  },
-  {
-    "title": "I Built an AI That Knows When I’m Wasting Time",
-    "excerpt": "A simple system that tracks my attention, understands my intent, and nudges me when I start to drift.",
-    "url": "https://medium.com/@ganeshkumarm1/i-built-an-ai-that-knows-when-im-wasting-time-71cd26e97edb",
-    "date": "2026-03-26",
     "displayDate": "Mar 2026"
   }
 ]

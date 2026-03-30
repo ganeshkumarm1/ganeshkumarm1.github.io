@@ -2,7 +2,8 @@
   {
     "name": "DriftWatcher",
     "description": "A quiet AI companion that notices when your attention wanders and gently brings you back to what you meant to do",
-    "tech": "Python, LLM",
+    "tech": "",
+    "language": "Python",
     "links": {
       "github": "https://github.com/ganeshkumarm1/DriftWatcher"
     },
@@ -10,24 +11,26 @@
     "order": 1
   },
   {
-    "name": "Many to One",
-    "description": "VSCode plugin to convert multiple spaces into a single space",
-    "tech": "Javascript",
+    "name": "Am I Replaceable",
+    "description": "An AI-powered roast tool that tells you how replaceable you are — with three levels of mercy: Nice, Honest, or Brutal.",
+    "tech": "",
+    "language": "TypeScript",
     "links": {
-      "github": "https://github.com/ganeshkumarm1/many-to-one"
+      "github": "https://github.com/ganeshkumarm1/am-i-replaceable",
+      "live": "https://am-i-replaceable-xi.vercel.app"
+    },
+    "featured": true,
+    "order": 2
+  },
+  {
+    "name": "InboxIQ",
+    "description": "A DIY email priority classification system built with bare Neural Network",
+    "tech": "",
+    "language": "TypeScript",
+    "links": {
+      "github": "https://github.com/ganeshkumarm1/InboxIQ"
     },
     "featured": true,
     "order": 3
-  },
-  {
-    "name": "Am I Replaceable",
-    "description": "An AI-powered roast tool that tells you how replaceable you are — with three levels of mercy: Nice, Honest, or Brutal.",
-    "tech": "NextJS, LLM",
-    "links": {
-      "github": "https://github.com/ganeshkumarm1/am-i-replaceable",
-      "live": "https://am-i-replaceable-xi.vercel.app/"
-    },
-    "featured": "true",
-    "order": 2
   }
 ]
