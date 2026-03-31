@@ -8,6 +8,8 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
 
@@ -16,16 +18,13 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Fetch and update writings.json
+      - name: Fetch and update medium_writings.json
         run: python scripts/sync_medium.py
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/writings.json
+          git add data/writings/medium_writings.json
           git diff --cached --quiet || git commit -m "chore: sync Medium articles"
           git push
