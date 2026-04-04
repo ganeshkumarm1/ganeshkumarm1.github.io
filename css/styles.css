@@ -981,44 +981,140 @@ html[data-theme="dark"] .company-logo:hover {
   padding-top: 0;
 }
 
-/* Connect — social icons */
-.section--connect {
-  padding-bottom: var(--space-3xl);
-}
-
-.connect__intro {
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  color: var(--color-text-muted);
-  margin: 0 0 var(--space-2xl);
-}
-
-.social {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Connect — icon row */
+.connect-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xl);
-}
-
-.social a {
-  display: inline-flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.connect-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   color: var(--color-text-muted);
-  transition: color var(--transition-fast), transform var(--transition-fast);
-}
-
-.social a:hover {
-  color: var(--color-accent);
-  transform: translateY(-2px);
-}
-
-.social__icon {
-  width: 22px;
-  height: 22px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
   flex-shrink: 0;
+}
+
+.connect-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.connect-icon:hover {
+  color: var(--color-text);
+  background: var(--color-bg-subtle);
+}
+
+.connect-icon::before {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.connect-icon:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.connect-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.connect-support {
+  margin-top: var(--space-md);
+  display: flex;
+}
+
+.connect-icon--support {
+  width: auto;
+  padding: 0 var(--space-md);
+  gap: 6px;
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.connect-icon--support:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.connect-icon--support svg {
+  width: 16px;
+  height: 16px;
+}
+
+.connect-icon__label {
+  white-space: nowrap;
+}
+
+.copy-email {
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.copy-email:hover {
+  color: var(--color-text);
+}
+
+.copy-email__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.copy-email__icon--check {
+  display: none;
+  color: #16a34a;
+  stroke: #16a34a;
+}
+
+.copy-email.copied .copy-email__icon--copy {
+  display: none;
+}
+
+.copy-email.copied .copy-email__icon--check {
+  display: block;
+  animation: popIn 0.2s ease;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 /* Skills section */
@@ -1113,45 +1209,6 @@ html[data-theme="dark"] .company-logo:hover {
 
 .nav__backdrop.active {
   display: block;
-}
-
-/* Chai4Me button */
-.chai-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-sm);
-  margin-top: var(--space-xl);
-  padding: var(--space-md) var(--space-lg);
-  background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  text-decoration: none;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform 0.2s ease;
-}
-
-.chai-btn:hover {
-  border-color: var(--color-text-muted);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-.chai-btn__logo {
-  height: 20px;
-  object-fit: contain;
-  display: block;
-  flex-shrink: 0;
-}
-
-html[data-theme="dark"] .chai-btn__logo {
-  filter: invert(1);
-}
-
-.chai-btn__label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  white-space: nowrap;
-  margin-top: 4px;
 }
 
 /* Footer */

@@ -147,6 +147,22 @@
     });
   }
 
+  // Copy email to clipboard
+  document.querySelectorAll('.copy-email').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      navigator.clipboard.writeText(btn.dataset.email).then(function () {
+        btn.classList.add('copied');
+        btn.dataset.tip = 'Copied!';
+        btn.setAttribute('aria-label', 'Copied!');
+        setTimeout(function () {
+          btn.classList.remove('copied');
+          btn.dataset.tip = 'Copy email';
+          btn.setAttribute('aria-label', 'Copy email address');
+        }, 2000);
+      });
+    });
+  });
+
   // Initialize
   loadProjects();
   loadWritings();
