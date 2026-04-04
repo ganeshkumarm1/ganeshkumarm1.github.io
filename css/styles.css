@@ -251,7 +251,7 @@ a:focus-visible {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-.nav__store {
+.store {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -312,7 +312,7 @@ html[data-theme="dark"] .hero__avatar--dark {
   display: block;
 }
 
-.nav__store .external-icon {
+.store .external-icon {
   stroke: var(--color-accent);
   opacity: 1;
 }
