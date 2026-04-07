@@ -468,7 +468,7 @@ main {
 }
 
 .hero__cta--secondary:hover {
-  border-color: var(--color-text);
+  border-color: var(--color-accent);
   color: var(--color-text) !important;
   transform: translateY(-2px);
 }
