@@ -1,5 +1,12 @@
 [
   {
+    "title": "The Hidden Reason Money Should Never Be Stored as Float",
+    "url": "https://ganeshkumarm1.medium.com/the-hidden-reason-money-should-never-be-stored-as-float-0d276ce284a6?source=rss-24546a9100c8------2",
+    "date": "2026-04-21",
+    "displayDate": "APR 2026",
+    "excerpt": "Tiny precision errors. Big money problems."
+  },
+  {
     "title": "Why Maps Don’t Store Every Road Point (And Still Look Perfect)",
     "url": "https://ganeshkumarm1.medium.com/why-maps-dont-store-every-road-point-and-still-look-perfect-0d1d4865d997?source=rss-24546a9100c8------2",
     "date": "2026-04-14",
@@ -61,12 +68,5 @@
     "date": "2021-04-17",
     "displayDate": "APR 2021",
     "excerpt": "Easily integrate with your Portfolio, Twitter, and more"
-  },
-  {
-    "title": "Creating a Beautiful Clock Using HTML5 Canvas",
-    "url": "https://medium.com/geekculture/creating-a-beautiful-clock-using-html5-canvas-a67acefb3255?source=rss-24546a9100c8------2",
-    "date": "2021-04-16",
-    "displayDate": "APR 2021",
-    "excerpt": "Revisiting the clock that I created 4 years back"
   }
 ]
